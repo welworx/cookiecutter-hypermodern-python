@@ -1,0 +1,3 @@
+
+# Don't add space between braces when safing the file
+*/.github/workflows/release.yml
