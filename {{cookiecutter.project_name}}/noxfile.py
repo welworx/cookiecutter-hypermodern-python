@@ -8,10 +8,8 @@ from textwrap import dedent
 
 import nox
 
-
 try:
-    from nox_poetry import Session
-    from nox_poetry import session
+    from nox_poetry import Session, session
 except ImportError:
     message = f"""\
     Nox failed to import the 'nox-poetry' package.
@@ -23,7 +21,7 @@ except ImportError:
 
 
 package = "{{cookiecutter.package_name}}"
-python_versions = ["3.10", "3.9", "3.8", "3.7"]
+python_versions = ["3.12", "3.11", "3.10", "3.9"]
 nox.needs_version = ">= 2021.6.6"
 nox.options.sessions = (
     "pre-commit",

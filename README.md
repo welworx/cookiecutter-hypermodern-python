@@ -4,27 +4,21 @@
 
 [![Status][status badge]][status badge]
 [![Python Version][python version badge]][github page]
-[![CalVer][calver badge]][calver]
 [![License][license badge]][license]<br>
 [![Read the documentation][readthedocs badge]][readthedocs page]
 [![Tests][github actions badge]][github actions page]
-[![Codecov][codecov badge]][codecov page]<br>
 [![pre-commit enabled][pre-commit badge]][pre-commit project]
 [![Black codestyle][black badge]][black project]
 [![Contributor Covenant][contributor covenant badge]][code of conduct]
 
 [black badge]: https://img.shields.io/badge/code%20style-black-000000.svg
 [black project]: https://github.com/psf/black
-[calver badge]: https://img.shields.io/badge/calver-YYYY.MM.DD-22bfda.svg
-[calver]: http://calver.org/
-[code of conduct]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/blob/main/CODE_OF_CONDUCT.md
-[codecov badge]: https://codecov.io/gh/cjolowicz/cookiecutter-hypermodern-python-instance/branch/main/graph/badge.svg
-[codecov page]: https://codecov.io/gh/cjolowicz/cookiecutter-hypermodern-python-instance
+[code of conduct]: https://github.com/welworx/cookiecutter-hypermodern-python/blob/main/CODE_OF_CONDUCT.md
 [contributor covenant badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
-[github actions badge]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/workflows/Tests/badge.svg
-[github actions page]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/actions?workflow=Tests
-[github page]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
-[license badge]: https://img.shields.io/github/license/cjolowicz/cookiecutter-hypermodern-python
+[github actions badge]: https://github.com/welworx/cookiecutter-hypermodern-python/workflows/Tests/badge.svg
+[github actions page]: https://github.com/welworx/cookiecutter-hypermodern-python/actions?workflow=Tests
+[github page]: https://github.com/welworx/cookiecutter-hypermodern-python
+[license badge]: https://img.shields.io/github/license/welworx/cookiecutter-hypermodern-python
 [license]: https://opensource.org/licenses/MIT
 [pre-commit badge]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
 [pre-commit project]: https://pre-commit.com/
@@ -34,8 +28,6 @@
 [status badge]: https://badgen.net/badge/status/alpha/d8624d
 
 <!-- badges-end -->
-
-<p align="center"><img alt="logo" src="docs/_static/logo.png" width="50%" /></p>
 
 [Cookiecutter] template for a Python package based on the
 [Hypermodern Python] article series.
@@ -47,8 +39,33 @@
 
 ## Usage
 
+### prepare environment:
+
 ```console
-cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
+pipx install cookiecutter
+pipx install poetry
+pipx install nox
+pipx inject nox nox-poetry
+```
+
+Keep everything up to date:
+
+```console
+pipx upgrade cookiecutter
+pipx upgrade --include-injected nox
+poetry self update
+```
+
+### Latest version
+
+```console
+cookiecutter gh:welworx/cookiecutter-hypermodern-python
+```
+
+### Specific tagged version:
+
+```console
+cookiecutter gh:welworx/cookiecutter-hypermodern-python --checkout=2022.6.3
 ```
 
 ## Features
@@ -78,7 +95,7 @@ cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
 - Generate command-line reference with [sphinx-click]
 - Manage project labels with [GitHub Labeler]
 
-The template supports Python 3.7, 3.8, 3.9, and 3.10.
+The template supports Python 3.9, 3.10, 3.11 and 3.12.
 
 [autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 [bandit]: https://github.com/PyCQA/bandit

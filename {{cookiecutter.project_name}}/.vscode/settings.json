@@ -1,0 +1,10 @@
+{
+  "flake8.args": ["--max-line-length=88"],
+  "editor.rulers": [88, 120],
+  "black-formatter.args": [
+    "--line-length",
+    "88",
+    "--skip-magic-trailing-comma"
+  ],
+  "black-formatter.importStrategy": "fromEnvironment"
+}
