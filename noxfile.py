@@ -1,12 +1,13 @@
 """Nox sessions."""
-from pathlib import Path
+
 import shutil
+from pathlib import Path
 
 import nox
 from nox.sessions import Session
 
 nox.options.sessions = ["docs"]
-owner, repository = "cjolowicz", "cookiecutter-hypermodern-python"
+owner, repository = "welworx", "cookiecutter-hypermodern-python"
 labels = "cookiecutter", "documentation"
 bump_paths = "README.md", "docs/guide.rst", "docs/index.rst", "docs/quickstart.md"
 

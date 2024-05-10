@@ -185,7 +185,7 @@ $ pipx install cookiecutter
 Install [Poetry] by downloading and running [install-poetry.py]:
 
 ```console
-$ python install-poetry.py
+$ pipx install poetry
 ```
 
 Install [Nox] and [nox-poetry] using pipx:
