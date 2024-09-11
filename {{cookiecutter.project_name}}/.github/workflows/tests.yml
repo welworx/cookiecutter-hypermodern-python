@@ -101,6 +101,8 @@ jobs:
         uses: "actions/upload-artifact@v3"
         with:
           name: coverage-data
+          if-no-files-found: error
+          include-hidden-files: true
           path: ".coverage.*"
 
       - name: Upload documentation
