@@ -33,7 +33,30 @@ You can install _{{cookiecutter.friendly_name}}_ via [pip] from [PyPI]:
 
 ```console
 $ pip install {{cookiecutter.project_name}}
+$ poetry add {{cookiecutter.project_name}}
 ```
+
+## Development setup
+
+- First install .venv from vscode (no pip reqirements)
+- `pip install poetry`
+- run `poetry update` (to install all poetry manage packages in the newest version)
+
+For updating packages run `poetry update`
+
+- poetry add <package>
+- poetry update
+- poetry add --dev nox nox-poetry pytest-cov nox-poetry
+
+Poetry can export the dependencies to other formats, for this `poetry self add poetry-plugin-export` is needed.
+
+### Best practice
+
+- Test code with`coverage run -m pytest` or `pytest --cov`
+- Check if all formal checks (e.g. linting) are passed with `nox -rs pre-commit`
+- Check if all wanted variable types are implemented properly with `nox -rs typeguard`
+- Bump version in pyproject.toml
+- Always push to branch (otherwise some github workflows will fail!)
 
 ## Usage
 
