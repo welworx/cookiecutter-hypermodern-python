@@ -46,7 +46,8 @@ For updating packages run `poetry update`
 
 - poetry add <package>
 - poetry update
-- poetry add --dev nox nox-poetry pytest-cov nox-poetry
+- poetry add nox nox-poetry pytest-cov nox-poetry --group dev
+- poetry add package-you-need-for-tests --group test
 
 Poetry can export the dependencies to other formats, for this `poetry self add poetry-plugin-export` is needed.
 
