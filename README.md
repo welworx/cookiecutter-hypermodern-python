@@ -39,6 +39,11 @@
 
 ## Usage
 
+### pipx for macos
+```console
+brew install pipx
+pipx ensurepath
+````
 ### prepare environment:
 
 ```console
