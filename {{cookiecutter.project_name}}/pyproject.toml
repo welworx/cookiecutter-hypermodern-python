@@ -60,6 +60,9 @@ nox-poetry = "^1.0.3"
 [tool.poetry.scripts]
 {{cookiecutter.project_name}} = "{{cookiecutter.package_name}}.__main__:main"
 
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
 tests = ["tests", "*/tests"]
